@@ -41,10 +41,10 @@
                     break;
             }
 
-            if (!Grid.IsPresent(Position))
+            if (!Grid.IsValidPosition(Position))
             {
                 Position = oldPosition;
-                if (!Grid.IsScented(Position))
+                if (!Grid.HasScent(Position))
                 {
                     Grid.LeaveScent(Position);
                     IsLost = true;
@@ -85,7 +85,7 @@
         public override string ToString()
         {
             var lostStatus = IsLost ? " LOST" : "";
-            return $"{Position.X} {Position.Y} {Orientation} {lostStatus}";
+            return $"{Position.X} {Position.Y} {Orientation}{lostStatus}";
         }
     }
 }
