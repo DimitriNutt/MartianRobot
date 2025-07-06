@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Martian Robots</h1>
+    <p>Control your Martian robots with the interface below.</p>
+</div>
+
+<div class="container mt-4">
+    <partial name="PartialViews/_MartianRobot" model="Model.MartianRobot" />
+</div>

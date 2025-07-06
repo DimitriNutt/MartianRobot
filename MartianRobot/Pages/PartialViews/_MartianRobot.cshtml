@@ -1,0 +1,13 @@
+﻿@model MartianRobotModel
+
+<form method="post">
+    <div>
+        <label><b>Input</b></label><br />
+        <textarea asp-for="Input" cols="30" rows="10" placeholder="Enter Instructions"></textarea>
+    </div>
+    <button type="submit">Move</button>
+    <div>
+        <label><b>Output</b></label><br />
+        <pre>@Model.Output</pre>
+    </div>
+</form>
